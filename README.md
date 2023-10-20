@@ -1,4 +1,4 @@
-# Explicación de código: Aplicación de Android con Jetpack Compose
+# Curso Primera App Para Android #AndroidBasics
 
 ## 1. Article App
 Este código es una implementación básica de una aplicación de Android utilizando Jetpack Compose, una moderna biblioteca de desarrollo de interfaz de usuario (UI) que simplifica y ac
@@ -141,4 +141,72 @@ El resultado final sería el siguiente:
 
 
 
-## 3. Birthday Card App
+## 3. Presentation Card App
+
+Por último, en este curso se nos pide realizar una app de una carta de presentación. Replicando las técnicas vistas en todo el curso no ha habido ningún problema para realizar dicha tarea. El código es el siguiente:
+```kotlin
+@Composable
+fun Container(name: String, modifier: Modifier = Modifier) {
+    Column (
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier
+            .fillMaxHeight()
+            .background(Color(0xFF9EE2EB)) //FF9EE2EB
+    ) {
+        IconCard(name = "Minerva Quintero",
+            jobTitle = "Scrum Manager",
+            fontColor = Color(0xFF4D4848),
+            modifier = Modifier
+
+        )
+    }
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Bottom,
+        modifier = Modifier
+            .padding(bottom = 25.dp)
+    ) {
+        InfoCard(number = "+(34) 656898788",
+            email = "minerva.quintero@jemeil.com",
+            fontColor = Color(0xFF4D4848),
+            modifier = Modifier
+        )
+    }
+}
+```
+Donde creamos dos elementos, uno centrado y otro colocado al final del móvil. Dentro de cada llamamos a cada componente composable creado a parte:
+```kotlin
+@Composable
+fun InfoCard(number: String, email: String, fontColor: Color, modifier: Modifier= Modifier){
+
+    Text(
+        text = "$number",
+        color = fontColor,
+        modifier = Modifier
+    )
+    Text(text = "$email",
+        color = fontColor,
+    )
+}
+
+@Composable
+fun IconCard(name: String, jobTitle: String, fontColor: Color, modifier: Modifier= Modifier){
+
+    Icon(Icons.Rounded.Face,
+        contentDescription = "Localized description",
+        modifier = Modifier
+            .size(70.dp))
+    Text(text = "$name",
+        color = fontColor,
+    )
+    Text(text = "$jobTitle",
+        color = fontColor,)
+
+}
+```
+Y el resultado final sería el siguiente:
+
+<img width="291" alt="Captura de pantalla 2023-10-20 a las 12 43 15" src="https://github.com/MinervaQuin/PAMN/assets/100958927/50283231-ab7f-4ed1-94a6-8882a4cd0d23">
+
+
