@@ -211,7 +211,9 @@ Y el resultado final sería el siguiente:
 
 ## 4. DataStore Codelab
 Se ha realizado una app que recuerda la preferencia del usuario según si quiere ver una lista de objetos en modo columna o en modo rejilla. Los pasos dados son los mismos del codelab. No se ha encontrado ningún problema.
+
 <img width="321" alt="Captura de pantalla 2023-11-05 a las 15 48 21" src="https://github.com/MinervaQuin/PAMN/assets/100958927/7149a486-bf89-470e-9821-1580415166c9">
-<img width="231" alt="Captura de pantalla 2023-11-05 a las 15 48 06" src="https://github.com/MinervaQuin/PAMN/assets/100958927/04b8ec3e-5d39-4cfb-a613-35ae95eb3557">
+<img width="317" alt="Captura de pantalla 2023-11-05 a las 15 48 12" src="https://github.com/MinervaQuin/PAMN/assets/100958927/4fcda308-cb3b-41b9-a199-06a2a970e399">
+
 
 
